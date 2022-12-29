@@ -22,8 +22,8 @@ export const data = {
     gameMechanic: {
       type: "keyword_input",
       configuration: {
-        headline: "This is just a placeholder?",
-        label: "Jetzt participate",
+        headline: "What is the capitol of Szczecin?",
+        label: "Don't click",
       },
     },
   },
@@ -37,7 +37,7 @@ export const data = {
       type: "ab",
       configuration: {
         headline: "Choose wisely",
-        label: "Click click!",
+        label: "AB Click",
         answers: [
           { label: "One", value: "one" },
           { label: "Two", value: "two" },
