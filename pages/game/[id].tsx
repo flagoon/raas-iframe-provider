@@ -9,7 +9,7 @@ const Page = ({ game }: { game: IGame }) => {
 export default Page;
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
-  const res = await axios.post<IGame>("http://localhost:3000/api/games", {
+  const res = await axios.post<IGame>(`${process.env.HOST}/api/games`, {
     id: params?.id as string,
   });
 
