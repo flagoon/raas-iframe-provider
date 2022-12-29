@@ -3,5 +3,5 @@ export const ABConfiguration = ({
 }: {
   config: IGame["gameMechanic"]["configuration"];
 }) => {
-  return <div>AB</div>;
+  return <div>ABC</div>;
 };
