@@ -1,4 +1,4 @@
-import { GetStaticPropsContext, NextPageContext } from "next";
+import { GetStaticPropsContext } from "next";
 import { Game } from "../../components/Game";
 
 const Page = ({ game }: { game: IGame }) => {
