@@ -1,5 +1,6 @@
 import { GetStaticPropsContext } from "next";
 import { Game } from "../../components/Game";
+import axios from "axios";
 
 const Page = ({ game }: { game: IGame }) => {
   return <Game game={game} />;
@@ -8,14 +9,11 @@ const Page = ({ game }: { game: IGame }) => {
 export default Page;
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
-  const game = await fetch("http://localhost:3000/api/games", {
-    method: "post",
-    body: params?.id as string,
+  const res = await axios.post<IGame>("http://localhost:3000/api/games", {
+    id: params?.id as string,
   });
 
-  const json = await game.json();
-
-  return { props: { game: json } };
+  return { props: { game: res.data } };
 };
 
 export const getStaticPaths = async () => {
